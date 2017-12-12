@@ -1,3 +1,4 @@
+var path = require('path')
 var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
@@ -26,9 +27,18 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      inject: true
+      filename: path.resolve(__dirname, '../dist/abox/abox.html'),
+      template: './src/abox/abox.html',
+      chunks:['abox/abox','vendor','manifest'],
+      inject: true,
+      chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      filename: path.resolve(__dirname, '../dist/bbox/bbox.html'),
+      template:  './src/bbox/bbox.html',
+      chunks:['bbox/bbox','vendor','manifest'],
+      inject: true,
+      chunksSortMode: 'dependency'
     }),
     new FriendlyErrorsPlugin()
   ]

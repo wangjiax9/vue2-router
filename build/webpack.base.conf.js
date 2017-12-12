@@ -9,7 +9,8 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    'abox/abox': './src/abox/main.js',
+    'bbox/bbox': './src/bbox/main.js'
   },
   output: {
     path: config.build.assetsRoot,
