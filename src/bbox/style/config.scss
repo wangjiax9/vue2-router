@@ -1,0 +1,44 @@
+$baseFontSize:100 !default;
+@function toRem($px){
+    @return ($px / $baseFontSize ) * 1rem;
+}
+
+$font-default:toRem(36);
+$font-big:toRem(48);
+$font-middle:toRem(42);
+$font-small:toRem(30);
+$font-mini:toRem(24);
+
+$body-bg: #fff; 
+$content-bg: #fff; 
+$border-bg: #ebebeb;
+
+$default-text: #808080; 
+$common-text: #999;  
+$stress-text:#333; 
+$mute-text:#00b4b4;
+$black-text:#000;
+$grayish-text:#ccc;
+
+$label-text:#fff; 
+$c1:#ff5e5e;
+$c2:#ffa031;
+$c3:#6f9ce6;
+
+@mixin clearfix(){
+    &:after{
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+@mixin ellipsis($param){
+    width:$param;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}

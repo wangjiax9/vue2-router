@@ -1,0 +1,100 @@
+@import './config.scss';
+
+html,body,ul,img,dl,dt,dd,h1{
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    outline: 0;
+    vertical-align: baseline;
+}
+html,body{
+    width:100%;
+    min-height:200px;
+    min-height: -webkit-calc(100vh);
+    overflow-x: hidden;
+}
+body{ 
+    background: $body-bg;
+    font-size: $font-default;
+    line-height: 1.5;
+    color:$default-text;
+    font-family:helvetica, "microsoft yahei", sans-serif, Arial, "Roboto", "droid sans fallback";
+}
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+}
+*{
+  outline: none; 
+  -webkit-tap-highlight-color: transparent;  
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+ul{list-style: none;} 
+a{
+    color:$stress-text;
+    text-decoration:none; 
+}
+em{
+    font-style: normal;
+}
+.ico{
+    display: inline-block;
+    width:toRem(60);
+    height:toRem(60);
+    vertical-align: middle;
+    position: relative;
+    &-48{width:toRem(48);height:toRem(48);}
+    &-72{width:toRem(72);height:toRem(72);}
+    &-90{width:toRem(90);height:toRem(90);}
+    
+    &-sex{
+        &-0{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ead16f0494eff34b5446K9AOva7o') no-repeat;
+            background-size: contain;
+        }
+        &-1{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ead17f9d2a38f57ceeb7j1NWm3VH') no-repeat;
+            background-size: contain;
+        }
+        &-2{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ead1143cfaa2dcf3e5ceBl1lgjge') no-repeat;
+            background-size: contain;
+        }
+    }
+    &-usertype{
+        &-2{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ea1da7f25272fdddfe98d3QIPkG5') no-repeat;
+            background-size: contain;
+        }
+        &-3{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ea1d5e6027f5611a15f15N3LeT1e') no-repeat;
+            background-size: contain;
+        }
+        &-4{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ea1d6f0494eff34b5419se37m4rd') no-repeat;
+            background-size: contain;
+        }
+        &-5{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30ea1d8b7427495a795d42VfNEVsMm') no-repeat;
+            background-size: contain;
+        }
+        &-6{
+            background: url('https://gameapp.fp.ps.netease.com/file/5a30eacc96dee43528593febZvjI2sR5') no-repeat;
+            background-size: contain;
+        }
+    }
+}
+.btn{
+    display: inline-block;
+    height:toRem(80);
+    line-height: toRem(80);
+    color:$label-text;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: toRem(8);
+    position: relative;
+    user-select: none;
+    background: $mute-text;
+}
